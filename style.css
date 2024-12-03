@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ABCGintoNord';
+    src: url('/fonts/ABCGintoNord-800.woff2') format('woff2'),
+         url('/fonts/ABCGintoNord-800.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+ 
+  @font-face {
+    font-family: 'ggsans';
+    src: url('/fonts/ggsans-regular.woff2') format('woff2'),
+         url('/fonts/ggsans-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'ggsans';
+    src: url('/fonts/ggsans-bold.woff2') format('woff2'),
+         url('/fonts/ggsans-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .how {
+    animation: moveUpDown 3s infinite;
+  }
+
+  @keyframes moveUpDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .movement {
+    animation: moves 3s infinite linear;
+  }
+
+  @keyframes moves {
+    0% {
+      transform: translateY(0);
+    }
+
+    25% {
+      transform: translateY(-5px);
+    }
+
+  }
+  .rightleft{
+    animation:leftright 20s infinite linear; 
+  }
+  
+  @keyframes leftright{
+    0% { transform: translateX(100%) }
+    100% { transform: translateX(-100%)
+    }
+  }
+
+  .leftmove{
+    animation:movies 20s infinite linear 3s; 
+  }
+
+  @keyframes movies{
+    0% {
+        transform: translateX(0) translateY(0); /* Initial position */
+      }
+      25% {
+        transform: translateX(-5px) translateY(-20px); /* Slightly left and up */
+      }
+      50% {
+        transform: translateX(-10px) translateY(0); /* Leftward and back to center vertically */
+      }
+      75% {
+        transform: translateX(-15px) translateY(20px); /* Further left and down */
+      }
+      100% {
+        transform: translateX(-20px) translateY(0); /* Fully left and back to vertical center */
+      }
+  }
